@@ -120,7 +120,10 @@ INSERT INTO mydb.Horarios(listaHorarios) VALUES('15:50 - 16:40');
 INSERT INTO mydb.Horarios(listaHorarios) VALUES('16:40 - 17:30');
 INSERT INTO mydb.Horarios(listaHorarios) VALUES('17:30 - 18:20');
 
-INSERT INTO mydb.Usuarios(nome, senha, Papel_nomePapel) VALUES('allan', '123', 'Funcionario');
+INSERT INTO mydb.Usuarios(nome, senha, Papel_nomePapel) VALUES('operador', '123', 'Funcionario');
+
+/* INSERTS PARA TESTES
+
 INSERT INTO mydb.Usuarios(nome, senha, Papel_nomePapel) VALUES('julio', '123', 'Professor');
 UPDATE mydb.Usuarios SET nome = 'jose', senha = '123', Papel_nomePapel = 'Professor' WHERE idUsuarios = 2;
 
@@ -148,3 +151,4 @@ FROM mydb.Chamados C LEFT JOIN mydb.Soluciona S ON C.idChamados = S.Chamados_idC
 
 SELECT R.Laboratorios_idLaboratorio AS Laboratorio, R.dataReservada AS data_reservada, R.Horarios_listaHorarios AS horario_reservado, U.nome AS nome_usuário, R.idReserva AS codigo_reserva 
 FROM mydb.Reserva R INNER JOIN mydb.Usuarios U ON R.usuarios_idusuarios = U.idUsuarios WHERE R.dataReservada = '2023-06-13' AND R.Laboratorios_idLaboratorio = 1 AND R.Horarios_listaHorarios >= '07:30 - 08:20';
+*/
